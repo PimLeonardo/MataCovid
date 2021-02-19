@@ -9,8 +9,21 @@
 
 	<body onresize="tamanhoDaTela()">
 
+		<div class="painel">
+			<div class="tempo">
+				Tempo restante: ?
+			</div>
+			<div class="vida">
+				<img src="img/coracao_vazio.png">
+				<img src="img/coracao_cheio.png">
+				<img src="img/coracao_cheio.png">
+			</div>
+		</div>
+
 		<script>
-			posicaoVirus()
+			setInterval(function(){
+				posicaoVirus()
+			}, 1000)
 		</script>
 
 	</body>
