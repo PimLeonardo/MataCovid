@@ -11,17 +11,18 @@
 
 		<div class="painel">
 			<div class="tempo">
-				Tempo restante: ?
+				Tempo restante: <span id="tempo" ></span>
 			</div>
 			<div class="vida">
-				<img src="img/coracao_vazio.png">
-				<img src="img/coracao_cheio.png">
-				<img src="img/coracao_cheio.png">
+				<img id="vida1" src="img/coracao_cheio.png">
+				<img id="vida2" src="img/coracao_cheio.png">
+				<img id="vida3" src="img/coracao_cheio.png">
 			</div>
 		</div>
 
 		<script>
-			setInterval(function(){
+			document.getElementById('tempo').innerHTML = tempo
+			var criaVirus = setInterval(function(){
 				posicaoVirus()
 			}, 1000)
 		</script>
