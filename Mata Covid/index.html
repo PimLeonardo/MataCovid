@@ -3,29 +3,62 @@
 
 	<head>
 		<title>Mata Covid</title>
-		<link rel="stylesheet" type="text/css" href="estilo.css">
-		<script src="jogo.js"></script>
-	</head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="img/icon.png">
 
-	<body onresize="tamanhoDaTela()">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-		<div class="painel">
-			<div class="tempo">
-				Tempo restante: <span id="tempo" ></span>
-			</div>
-			<div class="vida">
-				<img id="vida1" src="img/coracao_cheio.png">
-				<img id="vida2" src="img/coracao_cheio.png">
-				<img id="vida3" src="img/coracao_cheio.png">
-			</div>
-		</div>
+		<link rel="stylesheet" href="estilo.css">
 
 		<script>
-			document.getElementById('tempo').innerHTML = tempo
-			var criaVirus = setInterval(function(){
-				posicaoVirus()
-			}, 1000)
+			function iniciar(){
+				var nivel = document.getElementById('nivel').value
+
+				if (nivel === '') {
+					alert('Selecione um nível')
+					return false
+				}
+				window.location.href = "jogo.html?" + nivel
+			}
 		</script>
+	</head>
+
+	<body>
+
+		<div style="padding:30px;" class="container">
+
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<img src="img/game.png">
+					</div>
+				</div>
+			</div>
+
+			<div style="padding: 30px" class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<select id="nivel">
+							<option value="">Escolha o nível</option>
+							<option value="facil">Fácil</option>
+							<option value="normal">Normal</option>
+							<option value="dificil">Difícil</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div style="padding: 30px" class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<button type="button" class="btn btn-danger btn-lg" onclick="iniciar()">	
+						Iniciar
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
 
 	</body>
 

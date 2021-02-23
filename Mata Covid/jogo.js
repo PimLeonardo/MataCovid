@@ -25,16 +25,27 @@ function tamanhoRandom() {
 			return 'covid4'
 	}
 }
+//recuperando o parametro e ajustando o nivel
+var tempoVirus = 1500
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+if (nivel === 'facil') {
+	tempoVirus = 1500
+} else if (nivel === 'normal') {
+	tempoVirus = 1000
+} else if (nivel === 'dificil') {
+	tempoVirus = 750
+}
 
 //logica para as vidas 
 var vidas = 1
-var tempo = 10
+var tempo = 15
 var relogio = setInterval(function() {
 	tempo -= 1
 	if (tempo < 0) {
 		clearInterval(relogio)
 		clearInterval(criaVirus)
-		alert('Vitoria')
+		window.location.href = 'vitoria.html'
 	} else {
 		document.getElementById('tempo').innerHTML = tempo
 	}

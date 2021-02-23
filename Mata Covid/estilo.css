@@ -1,3 +1,7 @@
+html{
+	cursor: url('img/vacina.png') 30 30, auto;
+}
+
 body{
 	background-image: url(img/fundo.jpg);
 	background-repeat: no-repeat;
