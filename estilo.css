@@ -1,0 +1,51 @@
+html {
+  cursor: url("img/vacina.png") 30 30, auto;
+}
+
+body {
+  background-image: url(img/fundo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.painel {
+  position: absolute;
+  width: 200px;
+  padding: 13px;
+  top: 0px;
+  left: 0px;
+  border-top: 1px #fff;
+  background-color: #fff;
+  opacity: 0.7;
+}
+
+.vida {
+  float: left;
+  padding-top: 10px;
+}
+
+.tempo {
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.covid1 {
+  width: 70px;
+  height: 60px;
+}
+
+.covid2 {
+  width: 90px;
+  height: 80px;
+}
+
+.covid3 {
+  width: 50px;
+  height: 40px;
+}
+
+.covid4 {
+  width: 50px;
+  height: 40px;
+}
